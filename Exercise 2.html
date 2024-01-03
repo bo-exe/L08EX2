@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullPage.js Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
+    <style>
+        .section {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .slide {
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="fullpage">
+        <div class="section" data-anchor="section1">
+            <h2>Section 1</h2>
+        </div>
+        <div class="section" data-anchor="section2">
+            <h2>Section 2</h2>
+        </div>
+        <div class="section" data-anchor="section3">
+            <div class="slide" data-anchor="slide1">
+                <h2>Slide 1</h2>
+                <p>Content for Slide 1</p>
+            </div>
+            <div class="slide" data-anchor="slide2">
+                <h2>Slide 2</h2>
+                <p>Content for Slide 2</p>
+            </div>
+            <div class="slide" data-anchor="slide3">
+                <h2>Slide 3</h2>
+                <p>Content for Slide 3</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+    <script>
+        new fullpage('#fullpage', {
+            sectionsColor: ['#f0f0f0', '#e0e0e0', '#d0d0d0'],
+            anchors: ['section1', 'section2', 'section3','slide1','slide2','slide3'],
+            menu: '#menu',
+            controlArrows: true,
+            afterLoad: function (origin, destination, direction) { 
+            },
+        });
+    </script>
+
+</body>
+</html>
